@@ -1,0 +1,559 @@
+/* =====================================================
+   UNIVERSITY PRINTING DEPARTMENT
+   Main CSS Styling
+   ===================================================== */
+
+:root {
+    --primary: #003366;
+    --secondary: #00509d;
+    --accent: #28a745;
+    --warning: #f59e0b;
+
+    --background: #f4f7fb;
+    --card: #ffffff;
+    --text: #222222;
+    --muted: #666666;
+    --border: #d9e1ea;
+
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================================================
+   GENERAL PAGE STYLING
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+/* =====================================================
+   NAVIGATION BAR
+   ===================================================== */
+
+.navbar {
+    background-color: #02294f;
+    text-align: center;
+    padding: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: var(--secondary);
+    color: white;
+}
+
+/* =====================================================
+   PAGE TITLES
+   ===================================================== */
+
+.page-title {
+    text-align: center;
+    color: var(--primary);
+    margin: 30px 0 20px;
+}
+
+/* =====================================================
+   HOME PAGE BANNER
+   ===================================================== */
+
+.banner {
+    background-color: var(--card);
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 40px 25px;
+    text-align: center;
+    border-radius: 12px;
+    border-left: 6px solid var(--secondary);
+    box-shadow: var(--shadow);
+}
+
+.banner h2 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.banner p {
+    color: var(--muted);
+    font-size: 17px;
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.banner button,
+.btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.banner button:hover,
+.btn:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   MATERIAL CARDS
+   ===================================================== */
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+.box {
+    background-color: var(--card);
+    width: 250px;
+    margin: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.box h3 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.box p {
+    color: var(--muted);
+}
+
+.box p:first-of-type {
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* =====================================================
+   ORDER FORM
+   ===================================================== */
+
+form {
+    background-color: var(--card);
+    width: 450px;
+    max-width: 92%;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: white;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(0, 80, 157, 0.12);
+}
+
+/* Submit button */
+
+input[type="submit"] {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--secondary);
+}
+
+/* =====================================================
+   ABOUT US PAGE
+   ===================================================== */
+
+.content {
+    background-color: var(--card);
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.content h3 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 8px;
+    margin-top: 25px;
+}
+
+.content h3:first-child {
+    margin-top: 0;
+}
+
+.content p,
+.content li {
+    color: #444;
+}
+
+.content ul {
+    padding-left: 25px;
+}
+
+.content li {
+    margin-bottom: 8px;
+}
+
+/* =====================================================
+   ORDER SUMMARY
+   ===================================================== */
+
+.summary-container {
+    background-color: var(--card);
+    width: 650px;
+    max-width: 92%;
+    margin: 35px auto;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+/* Main summary heading */
+
+.summary-container h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--secondary);
+    font-size: 25px;
+}
+
+/* =====================================================
+   SUMMARY SECTIONS
+   ===================================================== */
+
+.summary-section {
+    margin-bottom: 25px;
+}
+
+.summary-section h3 {
+    color: var(--secondary);
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    background-color: #eef5fb;
+    border-left: 5px solid var(--primary);
+    border-radius: 4px;
+}
+
+/* =====================================================
+   SUMMARY ITEMS
+   ===================================================== */
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 5px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 15px;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-label {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.summary-value {
+    color: #333;
+    text-align: right;
+}
+
+/* =====================================================
+   COST BREAKDOWN
+   ===================================================== */
+
+.cost-breakdown {
+    background-color: #f8fafc;
+    padding: 15px 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.cost-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 0;
+    font-size: 15px;
+    border-bottom: 1px dashed #d5dbe3;
+}
+
+.cost-item:last-child {
+    border-bottom: none;
+}
+
+/* =====================================================
+   DISCOUNT
+   ===================================================== */
+
+.discount-badge {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 9px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* =====================================================
+   TOTAL AMOUNT
+   ===================================================== */
+
+.total-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: white;
+    padding: 18px 20px;
+    margin-top: 25px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    border-radius: 8px;
+}
+
+/* =====================================================
+   DESCRIPTION BOX
+   ===================================================== */
+
+.description-box {
+    background-color: #eef7ff;
+    border-left: 5px solid var(--secondary);
+    padding: 15px;
+    margin: 20px 0;
+    color: #333;
+    border-radius: 6px;
+}
+
+/* =====================================================
+   AVAILABLE MATERIALS
+   ===================================================== */
+
+.materials-list {
+    background-color: #f8fafc;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.materials-list h4 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.materials-list ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.materials-list li {
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.materials-list li:last-child {
+    border-bottom: none;
+}
+
+.materials-list li::before {
+    content: "✓ ";
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* =====================================================
+   BACK LINK
+   ===================================================== */
+
+.back-link {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.back-link a {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-link a:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .navbar a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .summary-container {
+        width: 92%;
+        padding: 20px;
+    }
+
+    .summary-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .summary-value {
+        text-align: left;
+        margin-top: 4px;
+    }
+
+    .total-amount {
+        font-size: 17px;
+    }
+
+    .content {
+        width: 92%;
+        padding: 20px;
+    }
+}
