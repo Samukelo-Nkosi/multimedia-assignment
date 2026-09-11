@@ -18,7 +18,6 @@
 
 <body>
 
-    <!-- Header -->
     <div class="header">
 
         <h1>
@@ -32,7 +31,6 @@
     </div>
 
 
-    <!-- Navigation -->
     <div class="navbar">
 
         <a href="home.html">
@@ -54,10 +52,6 @@
 
     if (isset($_POST["btn"])) {
 
-        /* ==========================================
-       GET FORM INFORMATION
-       ========================================== */
-
         $student_name = htmlspecialchars($_POST["student_name"]);
         $student_number = htmlspecialchars($_POST["student_number"]);
         $material_type = htmlspecialchars($_POST["material_type"]);
@@ -65,9 +59,6 @@
         $printing_option = htmlspecialchars($_POST["printing_option"]);
 
 
-        /* ==========================================
-       MATERIAL PRICES
-       ========================================== */
 
         $material_price = 0;
 
@@ -85,11 +76,6 @@
             $material_price = 60;
         }
 
-
-        /* ==========================================
-       PRINTING PRICES
-       ========================================== */
-
         $printing_price = 0;
 
         if ($printing_option == "Black and White") {
@@ -103,11 +89,6 @@
             $printing_price = 80;
         }
 
-
-        /* ==========================================
-       COST CALCULATIONS
-       ========================================== */
-
         $material_cost = $material_price * $quantity;
 
         $subtotal = $material_cost + $printing_price;
@@ -117,11 +98,6 @@
         $discount_applied = false;
 
 
-        /* ==========================================
-       DISCOUNT
-       10% OFF FOR 5 OR MORE COPIES
-       ========================================== */
-
         if ($quantity >= 5) {
 
             $discount_amount = $subtotal * 0.10;
@@ -129,10 +105,6 @@
             $discount_applied = true;
         }
 
-
-        /* ==========================================
-       FINAL TOTAL
-       ========================================== */
 
         $total = $subtotal - $discount_amount;
 
@@ -351,8 +323,6 @@
 
             </div>
 
-
-            <!-- Material Description -->
             <div class="description-box">
 
                 <?php
@@ -432,7 +402,6 @@
         </div>
 
 
-        <!-- Back Button -->
         <div class="back-link">
 
             <a href="Order material.html">
@@ -448,7 +417,6 @@
 
     ?>
 
-        <!-- If PHP page is accessed directly -->
         <div class="summary-container">
 
             <h2>
@@ -480,7 +448,6 @@
     ?>
 
 
-    <!-- Footer -->
     <div class="footer">
 
         <p>
